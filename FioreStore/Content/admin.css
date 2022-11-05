@@ -1,0 +1,28 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.admin__flex {
+    display: flex;
+}
+
+.admin__left-menu{
+    flex-basis: 20%;
+}
+
+.admin__content {
+    flex-basis: 80%;
+}
+
+.admin__left-menu div {
+    padding: 10px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}

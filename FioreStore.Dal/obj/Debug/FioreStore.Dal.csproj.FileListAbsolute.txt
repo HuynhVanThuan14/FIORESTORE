@@ -1,0 +1,6 @@
+F:\Năm 3 - Học kỳ II\cdio\DoAnCDIO\FioreStore\FioreStore.Dal\bin\Debug\FioreStore.Dal.dll
+F:\Năm 3 - Học kỳ II\cdio\DoAnCDIO\FioreStore\FioreStore.Dal\bin\Debug\FioreStore.Dal.pdb
+F:\Năm 3 - Học kỳ II\cdio\DoAnCDIO\FioreStore\FioreStore.Dal\obj\Debug\FioreStore.Dal.csproj.AssemblyReference.cache
+F:\Năm 3 - Học kỳ II\cdio\DoAnCDIO\FioreStore\FioreStore.Dal\obj\Debug\FioreStore.Dal.csproj.CoreCompileInputs.cache
+F:\Năm 3 - Học kỳ II\cdio\DoAnCDIO\FioreStore\FioreStore.Dal\obj\Debug\FioreStore.Dal.dll
+F:\Năm 3 - Học kỳ II\cdio\DoAnCDIO\FioreStore\FioreStore.Dal\obj\Debug\FioreStore.Dal.pdb

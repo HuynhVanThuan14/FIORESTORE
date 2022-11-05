@@ -1,0 +1,23 @@
+﻿body {
+}
+
+#product-menu__item {
+    width: 250px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+    #product-menu__item a {
+        padding: 12px 15px;
+        display: inline-block;
+        width: 100%;
+        color: #49860d;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    #product-menu__item:hover a {
+        background: #539414;
+        color: white;
+    }

@@ -1,0 +1,88 @@
+﻿
+
+#product-page {
+}
+
+    #product-page .product__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 86px;
+    }
+
+        #product-page .product__header .product__header--search, .main-header .product__header--search {
+            border-radius: 3px;
+            overflow: hidden;
+            height: 40px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+            .main-header .product__header--search{
+                border: none;
+                background: white;
+            }
+            #product-page .product__content {
+                display: flex;
+                justify-content: space-between;
+            }
+
+    #product-page .product__content--wrapper {
+        background: #f5f5f5;
+        padding: 30px 0 60px 0;
+    }
+
+    #product-page .product__content--menu {
+        width: 20%;
+    }
+
+    #product-page .product__content--main {
+        width: 78%;
+    }
+
+#MainContent_DropDownList1, #DropDownListt1 {
+    height: 100%;
+    border: none;
+    border-right: 1px solid #ccc;
+    background: #f5f5f5;
+    outline: none;
+}
+
+#MainContent_DropDownList2 {
+    padding: 6px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    outline: none;
+}
+
+#MainContent_TextBox1, #TextBoxt1 {
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 300px;
+}
+
+#MainContent_Button1 {
+    background: #539414;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 50px;
+    text-align: center;
+    padding: 9px 0;
+    color: white;
+}
+
+#Buttont1 {
+    background: #539414;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    width: 50px;
+    text-align: center;
+    padding: 11px 0;
+}
+
+#MainContent_Button1:hover, #Buttont1:hover {
+    background: #49860d;
+}

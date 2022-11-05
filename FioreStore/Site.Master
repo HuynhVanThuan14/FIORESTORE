@@ -1,0 +1,220 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FioreStore.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Fiore Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link href="Content/main.css" rel="stylesheet" />
+    <link href="css/_footer.css" rel="stylesheet" />
+    <link href="css/_header.css" rel="stylesheet" />
+    <link href="css/banner.css" rel="stylesheet" />
+    <link href="css/_news.css" rel="stylesheet" />
+    <link href="css/_menu.css" rel="stylesheet" />
+    <link href="css/_productCart.css" rel="stylesheet" />
+    <link href="css/newProduct.css" rel="stylesheet" />
+    <link href="css/_product.css" rel="stylesheet" />
+    <link href="css/ProDetail.css" rel="stylesheet" />
+    <link href="css/productRelate.css" rel="stylesheet" />
+    <style>
+        body {
+            color: #424242;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+
+
+
+
+
+        <div id="header" class="header">
+            <div class="top-header">
+                <div class="container t-flex">
+                    <p class="wellcome">Chào mừng bạn ghé thăm cửa hàng của chúng tôi</p>
+                    <div class="account">
+                        <div class="login">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            <a href="#">Đăng nhập</a>
+                        </div>
+
+                        <div class="register">
+                            <i class="fa-solid fa-registered"></i>
+                            <a href="#">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-header">
+
+
+                <div class="container">
+                    <div class="search" style="padding-bottom: 20px;">
+                        <div id="logo">
+                            <h2 style="font-size: 30px">FIORE STORE</h2>
+                        </div>
+                        <div class="product__header--search">
+                            <asp:DropDownList ID="DropDownListt1" runat="server"></asp:DropDownList>
+                            <asp:TextBox ID="TextBoxt1" runat="server" placeholder="Tìm kiếm sản phẩm ..."></asp:TextBox>
+                            <%--<asp:Button ID="Button1" runat="server" Text='' />--%>
+                            <asp:LinkButton ID="Buttont1" runat="server" ><i class="fa-solid fa-magnifying-glass"></i></asp:LinkButton>
+                        </div>
+                        <%--<div class="txt-search">
+                            <input
+                                style="width: 430px; height: 40px; padding: 0px 14px; border-radius: 8px; outline: none; border: none;"
+                                type="text" placeholder="Tìm kiếm sản phẩm...">
+
+                            <a href="#">
+                                <i style="color: white;" class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+
+                        </div>--%>
+
+                        <div class="t-contact">
+                            <div class="phone">
+                                <i style="color: white; padding: 10px;" class="fa-solid fa-phone"></i>
+                                <div>
+                                    <p>Gọi đặt hàng</p>
+                                    <a href="#">0824.644.573</a>
+                                </div>
+                            </div>
+                            <div class="phone phone2">
+                                <i style="color: white; padding: 10px;" class="fa-solid fa-phone"></i>
+                                <div>
+                                    <p>Gọi tư vấn</p>
+                                    <a href="#" class="phone">0824.644.573</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list" style="display: flex; align-items: center">
+                        <div class="list-pro" style="flex-basis: 270px; background: #49860D;">
+                            <ul style="display: flex; align-items: center; height: 45px;">
+                                <i style="padding: 12px 12px; color: white;" class="fa-solid fa-list"></i>
+                                <li><a style="font-weight: bold;" href="#">Danh mục sản phẩm</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header-menu" style="flex-basis: 900px;">
+
+                            <ul class="menu">
+                                <li><a href="Default.aspx">Trang chủ</a></li>
+                                <li><a href="About.aspx">Giới thiệu</a></li>
+                                <li><a href="Product.aspx">Sản phẩm</a></li>
+                                <li><a href="News.aspx">Tin tức</a></li>
+                                <li><a href="Contact.aspx">Liên hệ</a></li>
+                            </ul>
+                            <div id="cart">
+                                <a href="Cart.aspx">
+                                    <p style="font-weight: 700;">Cart <i class="fa-solid fa-cart-arrow-down"></i></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <footer>
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__top--image">
+                        <img
+                            src="Image/banner_newsletter.png"
+                            alt="hinhanh" />
+                    </div>
+                    <div class="footer__top--form">
+                        <input
+                            type="text"
+                            name="email"
+                            id="email"
+                            placeholder="Địa chỉ email (*)" />
+                        <input type="button" value="Đăng ký" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="footer__mid">
+                    <div class="footer__mid--box1 footer__mid--box">
+                        <h3>Giới thiệu</h3>
+                        <ul>
+                            <li><a href="#">Cơ hội nghề nghiệp</a></li>
+                            <li><a href="#">Quy chế sàn giao dịch</a></li>
+                            <li><a href="#">Các khuyến mãi đã bán</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid--box2 footer__mid--box">
+                        <h3>Chính sách công ty</h3>
+                        <ul>
+                            <li><a href="#">Hình thức đặt hàng</a></li>
+                            <li><a href="#">Hình thức thanh toán</a></li>
+                            <li><a href="#">Sử dụng Voucher/ E-voucher</a></li>
+                            <li><a href="#">Phương thức vận chuyên</a></li>
+                            <li><a href="#">Chính sách đổi trả hàng</a></li>
+                            <li><a href="#">Hướng dẫn sử dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mid--box3 footer__mid--box">
+                        <h3>Hotline liên hệ:</h3>
+                        <p
+                            style="font-size: 16px; text-decoration: none; color: #49860d; padding: 12px 0;">
+                            039.465.8880
+                        </p>
+                        <p
+                            style="font-size: 12px; color: rgb(90, 90, 90); margin-bottom: 20px;">
+                            (Tất cả các ngày trong tuần)
+                        </p>
+                        <h3>Kết nối với chúng tôi</h3>
+                    </div>
+                    <div class="footer__mid--box4 footer__mid--box">
+                        <h3>Hệ thống cửa hàng</h3>
+                        <h4>Trụ sở Tp. Hà Nội</h4>
+                        <p>Số 29 ngõ 18 Lương Ngọc Quyến, Hà Đông, Hà Nội</p>
+                        <h4>Trụ sở Tp. HCM</h4>
+                        <p>129 Nguyễn Chiến Thắng, Quận 1, Tp.HCM</p>
+                        <h4>Chi nhánh Đà Nẵng</h4>
+                        <p>123 Núi Thành, Hải Châu, Đà Nẵng</p>
+                        <h4>Chi nhánh Cần Thơ</h4>
+                        <p>234 Tô Hiệu, Tp. Cần Thơ</p>
+                        <a href="#" style="margin-top: 20px; display: block">Giờ mở hàng: 7:00-22:00 hàng ngày</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <p>© Dựng trang bởi Group1 CDIO | CDIO | Group1 theme | Wordpress</p>
+                <p>Liên kết web: Fiore | Shop bán hoa online</p>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

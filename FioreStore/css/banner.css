@@ -1,0 +1,43 @@
+﻿.banner {
+    display: flex;
+    background-color: #F5F5F5;
+    padding-top: 24px;
+    padding-bottom: 14px;
+}
+
+.banner-top {
+    overflow: hidden;
+}
+
+.banner-bot {
+    overflow: hidden;
+    display: flex;
+    padding-top: 14px;
+}
+
+.banner-bot-right {
+    overflow: hidden;
+}
+
+.banner-bot-left {
+    overflow: hidden;
+}
+
+.banner-right {
+    overflow: hidden;
+}
+
+.banner-left {
+    padding-right: 20px;
+}
+
+.banner-bot .banner-bot-left {
+    padding-right: 20px;
+}
+.hover-banner a img {
+    transition: transform 0.75s ease;
+}
+
+.hover-banner a:hover img {
+    transform: scale(1.1);
+}

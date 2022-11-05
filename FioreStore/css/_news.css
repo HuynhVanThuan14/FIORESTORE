@@ -1,0 +1,109 @@
+﻿
+
+.news-wrapper__flex {
+    display: flex;
+}
+
+.news-content {
+    flex-basis: 75%;
+    margin-bottom: 100px;
+}
+
+    .news-content p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .news-content tr {
+        margin-top: 35px;
+        display: block;
+    }
+
+        .news-content tr td {
+            display: flex;
+            flex-basis: 70%;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+    /*.news-content tr td:hover {
+box-shadow: 0 0 6px 2px rgba(116, 116, 116, 0.6);
+transition: all 0.5s ease;
+}*/
+
+    .news-content .content__left {
+        border-radius: 10px;
+        flex-basis: 40%;
+        text-align: center;
+    }
+
+        .news-content .content__left > a {
+            display: inline-block;
+            border-radius: 10px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+    .news-content .content__right .title:hover {
+        color: green;
+    }
+
+    .news-content .content__left img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .news-content .content__right {
+        padding: 20px;
+        flex-basis: 60%;
+    }
+
+        .news-content .content__right a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+.news-sub {
+    flex-basis: 25%;
+}
+
+    .news-sub table {
+        border-collapse: collapse;
+    }
+
+    .news-sub tr td {
+        border: 1px solid #ececec;
+        display: flex;
+        padding: 10px;
+    }
+
+.news-sub__link1 {
+    margin-bottom: 100px;
+}
+
+.news-sub .news-sub__link-left {
+    flex-basis: 20%;
+    margin-right: 12px;
+}
+
+.news-sub .news-sub__link-right a {
+    font-size: 14px;
+    color: #484848;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .news-sub .news-sub__link-right a:hover {
+        color: green;
+    }
+
+.news-sub .news-sub__link-left img {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+}

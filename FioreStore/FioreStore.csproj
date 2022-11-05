@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08807490-1549-4E2C-A9A8-68302C3C6F92}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FioreStore</RootNamespace>
+    <AssemblyName>FioreStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreeTextBox">
+      <HintPath>C:\Users\Administrator\Downloads\FTBv3-3-1\Framework-4-0\FreeTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Administrator.aspx" />
+    <Content Include="admin\adminControl.ascx" />
+    <Content Include="admin\adminControl.ascx" />
+    <Content Include="admin\Contact\ContactControl.ascx" />
+    <Content Include="admin\Login.ascx" />
+    <Content Include="admin\Menu.ascx" />
+    <Content Include="admin\News\NewsCategory.ascx" />
+    <Content Include="admin\News\NewsControl.ascx" />
+    <Content Include="admin\News\NewsDetail.ascx" />
+    <Content Include="admin\Product\ProductControl.ascx" />
+    <Content Include="admin\User\UserControl.ascx" />
+    <Content Include="App_Data\fiore_store.mdf" />
+    <Content Include="App_Data\fiore_store_log.ldf">
+      <DependentUpon>fiore_store.mdf</DependentUpon>
+    </Content>
+    <Content Include="Cart.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\admin.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="css\banner.css" />
+    <Content Include="css\newProduct.css" />
+    <Content Include="css\ProDetail.css" />
+    <Content Include="css\product.css" />
+    <Content Include="css\productRelate.css" />
+    <Content Include="css\_footer.css" />
+    <Content Include="css\_header.css" />
+    <Content Include="css\_menu.css" />
+    <Content Include="css\_news.css" />
+    <Content Include="css\_product.css" />
+    <Content Include="css\_productCart.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="display\all_control\dContact.ascx" />
+    <Content Include="display\all_control\dFooter.ascx" />
+    <Content Include="display\all_control\dIndex.ascx" />
+    <Content Include="display\all_control\dMenu.ascx" />
+    <Content Include="display\displayControl.ascx" />
+    <Content Include="display\menuControl.ascx" />
+    <Content Include="display\menuCountControl.ascx" />
+    <Content Include="display\News\dNewsControl.ascx" />
+    <Content Include="display\News\dNewsDetail.ascx" />
+    <Content Include="display\News\dNewsList.ascx" />
+    <Content Include="display\News\dNewsNew.ascx" />
+    <Content Include="display\Product\dProductControl.ascx" />
+    <Content Include="display\Product\dProductDetail.ascx" />
+    <Content Include="display\Product\dProductList.ascx" />
+    <Content Include="display\Product\dProductNew.ascx" />
+    <Content Include="display\Product\productNewControl.ascx" />
+    <Content Include="display\Product\productRelateControl.ascx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Image\BANNER4.jpg" />
+    <Content Include="Image\bg_top1.jpg" />
+    <Content Include="Image\binh-hoa-sinh-nhat-sang-trong-hien-dai-dep.jpg" />
+    <Content Include="Image\gio-hoa-sinh-nhat-tang-ban-gai-dep.jpg" />
+    <Content Include="Image\hoa-bo-tron-day-tang-sinh-nhat.png" />
+    <Content Include="Image\hoa-bo-tron-hoa-cat-tuong-300x316.png" />
+    <Content Include="Image\hoa-sinh-nhat-cat-tuong-dep-nhat-300x316.jpg" />
+    <Content Include="Product.aspx" />
+    <Content Include="ProductDetail.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Image\1234.jpg" />
+    <Content Include="Image\1234.jpg" />
+    <Content Include="Image\banner1.jpg" />
+    <Content Include="Image\banner2.jpg" />
+    <Content Include="Image\banner3.jpg" />
+    <Content Include="Image\banner_newsletter.png" />
+    <Content Include="Image\cach-giu-hoa-tuoi-lau-300x157.png" />
+    <Content Include="Image\fORKFpPAJBhBAtqljFcm0WEzvtxRUXHYXzoo6Du6.png" />
+    <Content Include="Image\group1222022523445.png" />
+    <Content Include="Image\hoa-bi-ngan-300x157.png" />
+    <Content Include="Image\hoa-sinh-nhat-tang-me-dep.jpg" />
+    <Content Include="Image\slider2.jpg" />
+    <Content Include="Image\y-nghia-hoa-hong-300x157.png" />
+    <Content Include="News.aspx" />
+    <Content Include="NewsDetail.aspx" />
+    <Content Include="NewsDetail.aspx" />
+    <Content Include="Products.aspx" />
+    <Content Include="Registation.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator.aspx.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator.aspx.designer.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminControl.ascx.cs">
+      <DependentUpon>adminControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminControl.ascx.designer.cs">
+      <DependentUpon>adminControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Contact\ContactControl.ascx.cs">
+      <DependentUpon>ContactControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Contact\ContactControl.ascx.designer.cs">
+      <DependentUpon>ContactControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\News\NewsCategory.ascx.cs">
+      <DependentUpon>NewsCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\News\NewsCategory.ascx.designer.cs">
+      <DependentUpon>NewsCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\News\NewsControl.ascx.cs">
+      <DependentUpon>NewsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\News\NewsControl.ascx.designer.cs">
+      <DependentUpon>NewsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\News\NewsControl.ascx.designer.cs">
+      <DependentUpon>NewsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\News\NewsDetail.ascx.cs">
+      <DependentUpon>NewsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\News\NewsDetail.ascx.designer.cs">
+      <DependentUpon>NewsDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\News\NewsDetail.ascx.designer.cs">
+      <DependentUpon>NewsDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Product\ProductControl.ascx.cs">
+      <DependentUpon>ProductControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Product\ProductControl.ascx.designer.cs">
+      <DependentUpon>ProductControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\User\UserControl.ascx.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\User\UserControl.ascx.designer.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="display\all_control\dContact.ascx.cs">
+      <DependentUpon>dContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\all_control\dContact.ascx.designer.cs">
+      <DependentUpon>dContact.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\all_control\dFooter.ascx.cs">
+      <DependentUpon>dFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\all_control\dFooter.ascx.designer.cs">
+      <DependentUpon>dFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\all_control\dIndex.ascx.cs">
+      <DependentUpon>dIndex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\all_control\dIndex.ascx.designer.cs">
+      <DependentUpon>dIndex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\all_control\dMenu.ascx.cs">
+      <DependentUpon>dMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\all_control\dMenu.ascx.designer.cs">
+      <DependentUpon>dMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\displayControl.ascx.cs">
+      <DependentUpon>displayControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\displayControl.ascx.designer.cs">
+      <DependentUpon>displayControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\menuControl.ascx.cs">
+      <DependentUpon>menuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\menuControl.ascx.designer.cs">
+      <DependentUpon>menuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\menuCountControl.ascx.cs">
+      <DependentUpon>menuCountControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\menuCountControl.ascx.designer.cs">
+      <DependentUpon>menuCountControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\News\dNewsControl.ascx.cs">
+      <DependentUpon>dNewsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\News\dNewsControl.ascx.designer.cs">
+      <DependentUpon>dNewsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\News\dNewsDetail.ascx.cs">
+      <DependentUpon>dNewsDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\News\dNewsDetail.ascx.designer.cs">
+      <DependentUpon>dNewsDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\News\dNewsList.ascx.cs">
+      <DependentUpon>dNewsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\News\dNewsList.ascx.designer.cs">
+      <DependentUpon>dNewsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\News\dNewsNew.ascx.cs">
+      <DependentUpon>dNewsNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\News\dNewsNew.ascx.designer.cs">
+      <DependentUpon>dNewsNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\Product\dProductControl.ascx.cs">
+      <DependentUpon>dProductControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\Product\dProductControl.ascx.designer.cs">
+      <DependentUpon>dProductControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\Product\dProductDetail.ascx.cs">
+      <DependentUpon>dProductDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\Product\dProductDetail.ascx.designer.cs">
+      <DependentUpon>dProductDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\Product\dProductList.ascx.cs">
+      <DependentUpon>dProductList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\Product\dProductList.ascx.designer.cs">
+      <DependentUpon>dProductList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\Product\dProductNew.ascx.cs">
+      <DependentUpon>dProductNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\Product\dProductNew.ascx.designer.cs">
+      <DependentUpon>dProductNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\Product\productNewControl.ascx.cs">
+      <DependentUpon>productNewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\Product\productNewControl.ascx.designer.cs">
+      <DependentUpon>productNewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="display\Product\productRelateControl.ascx.cs">
+      <DependentUpon>productRelateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display\Product\productRelateControl.ascx.designer.cs">
+      <DependentUpon>productRelateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registation.aspx.cs">
+      <DependentUpon>Registation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registation.aspx.designer.cs">
+      <DependentUpon>Registation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FioreStore.Dal\FioreStore.Dal.csproj">
+      <Project>{52e13ca2-ee68-4ce1-aa8e-321fa1d79086}</Project>
+      <Name>FioreStore.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65129</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
